@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post">
+
+    <label asp-for="Task">Task</label> 
+    <br />
+    <input asp-for="Task" />
+    <br />
+    <label asp-for="Due_Date">Due Date</label>
+    <br />
+    <input asp-for="Due_Date" />
+    <br />
+    <label asp-for="Quadrant">Quadrant</label>
+    <br />
+    <input asp-for="Quadrant"/>
+    <br />
+    <select asp-for="CategoryId">
+        <option value="Select a Category"></option>
+        @foreach (Category c in ViewBag.category)
+        {
+            <option value="@c.CategoryId">@c.CategoryName</option>
+            //uses viewbag here to pass information from controller to views
+        }
+    </select>
+    <br>
+    <label asp-for="Completed">Completed?</label>
+    <br />
+    <input asp-for="Completed" />
+
+</form>
