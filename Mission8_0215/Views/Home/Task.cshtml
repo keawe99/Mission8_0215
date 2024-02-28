@@ -1,16 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿model UserTask
+<h1>Task Form</h1>
 
 <form method="post">
+
+    <input type="hidden" asp-for="TaskId" />
 
     <label asp-for="Task">Task</label> 
     <br />
     <input asp-for="Task" />
     <br />
-    <label asp-for="Due_Date">Due Date</label>
+    <label asp-for="DueDate">Due Date</label>
     <br />
-    <input asp-for="Due_Date" />
+    <input asp-for="DueDate" />
     <br />
     <label asp-for="Quadrant">Quadrant</label>
     <br />
@@ -28,5 +29,7 @@
     <label asp-for="Completed">Completed?</label>
     <br />
     <input asp-for="Completed" />
+    <br /><br />
+    <button type="submit">Submit</button>
 
 </form>
